@@ -144,6 +144,7 @@ const playGame = () =>
     clickedOrder = [];
     score = 0;
     started = true;
+    updateScore(score);
     
     changeFillColor(darkBase, "#5779c9", darkBaseColor);
     setTimeout(() =>
