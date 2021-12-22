@@ -119,15 +119,14 @@ const updateScore = (score) =>
 
 const nextLevel = () => 
 {
-    changeFillColor(lightBase, "#96ffa1", lightBaseColor);
     score++;
 
+    updateScore(score);
+    changeFillColor(lightBase, "#96ffa1", lightBaseColor);
     setTimeout(() =>
     {
         shuffleOrder();
     }, 1000);
-
-    updateScore(score);
 }
 
 const gameOver = () => 
@@ -144,8 +143,8 @@ const playGame = () =>
     clickedOrder = [];
     score = 0;
     started = true;
+
     updateScore(score);
-    
     changeFillColor(darkBase, "#5779c9", darkBaseColor);
     setTimeout(() =>
     {
